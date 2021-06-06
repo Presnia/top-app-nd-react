@@ -3,7 +3,7 @@ import cn from 'classnames';
 import ArrowIcon from './arrow.svg';
 import styles from './Button.module.css';
 
-const Button = ({ appearance, children, arrow = 'none', className, ...props }: ButtonProps): JSX.Element => {
+export const Button = ({ appearance, children, arrow = 'none', className, ...props }: ButtonProps): JSX.Element => {
   return (
     <button className={cn(styles.button, className, {
       [styles.primary]: appearance == 'primary',
@@ -20,5 +20,3 @@ const Button = ({ appearance, children, arrow = 'none', className, ...props }: B
     </button>
   );
 };
-
-export default Button;
