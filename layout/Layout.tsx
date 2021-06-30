@@ -3,21 +3,19 @@ import { Header } from './Header/Header';
 import { SideBar } from "./SideBar/SideBar";
 import { Footer } from "./Footer/Footer";
 import cn from 'classnames';
-import styles from './Layout.module.css';
+import s from './Layout.module.css';
 import {FunctionComponent} from "react";
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
-    <>
-      <Header />
-      <div>
-        <SideBar />
-        <div>
+    <div className={s.wrapper}>
+      <Header className={s.header} />
+      <SideBar className={s.sidebar} />
+      <div className={s.body}>
           {children}
-        </div>
       </div>
-      <Footer />
-    </>
+      <Footer className={s.footer} />
+    </div>
   );
 };
 
