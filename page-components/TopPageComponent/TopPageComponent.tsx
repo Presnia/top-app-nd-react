@@ -40,4 +40,4 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
             {page.tags.map(t => <Tag key={t} color='primary'>{t}</Tag>)}
         </div>
     );
-}
+};
