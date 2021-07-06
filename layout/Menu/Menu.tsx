@@ -22,9 +22,9 @@ export const Menu = (): JSX.Element => {
 
     const buildFirstLevel = () => {
         return (
-            <>
+            <ul className={s.firstLevelList}>
                 {firstLevelMenu.map(m => (
-                    <div key={m.route}>
+                    <li key={m.route}>
                         <Link href={`/${m.route}`}>
                             <a>
                                 <div className={cn(s.firstLevel, {
@@ -36,9 +36,9 @@ export const Menu = (): JSX.Element => {
                             </a>
                         </Link>
                         {m.id == firstCategory && buildSecondLevel(m)}
-                    </div>
+                    </li>
                 ))}
-            </>
+            </ul>
         );
     };
 
@@ -47,7 +47,7 @@ export const Menu = (): JSX.Element => {
             <div className={s.secondBlock}>
                 {menu.map(m => {
                     if (m.pages.map(p => p.alias).includes(router.asPath.split('/')[2])) {
-                        m.isOpened = !m.isOpened;
+                        m.isOpened = true;
                     }
                     return (
                         <div key={m._id.secondCategory}>

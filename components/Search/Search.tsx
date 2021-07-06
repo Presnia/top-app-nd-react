@@ -17,7 +17,7 @@ export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
         router.push({
             pathname: '/search',
             query: {
-                search
+                q: search
             }
         }).then();
     };
