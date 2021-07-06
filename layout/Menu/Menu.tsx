@@ -39,7 +39,7 @@ export const Menu = (): JSX.Element => {
                     </div>
                 ))}
             </>
-        )
+        );
     };
 
     const buildSecondLevel = (menuItem: FirstLevelMenuItem) => {
