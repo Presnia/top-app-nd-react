@@ -6,6 +6,7 @@ import { Button } from "../Button/Button";
 import {declOfNumber, priceRu} from "../../helpers/helpers";
 import { Divider } from "../Divider/Divider";
 import Image from'next/image';
+import cn from 'classnames';
 import s from './Product.module.css';
 
 export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
@@ -67,7 +68,7 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
                     <div>{product.disadvantages}</div>
                 </div>}
             </div>
-            <Divider className={s.hr} />
+            <Divider className={cn(s.hr, s.hr2)} />
             <div className={s.actions}>
                 <Button appearance='primary'>Узнать подробнее</Button>
                 <Button appearance='ghost'

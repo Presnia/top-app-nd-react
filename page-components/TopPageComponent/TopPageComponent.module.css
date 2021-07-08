@@ -2,6 +2,8 @@
 	display: grid;
 	grid-template-columns: auto 1fr auto;
 
+	margin-bottom: 20px;
+
 	align-items: baseline;
 	justify-items: left;
 	gap: 20px;
@@ -38,4 +40,10 @@
 	font-size: 20px;
 	font-weight: 600;
 	line-height: 27px;
+}
+
+@media screen and (max-width: 1000px) {
+	.title {
+		grid-template-columns: auto 1fr;
+	}
 }
