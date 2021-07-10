@@ -18,3 +18,24 @@
 
 	font-weight: 100;
 }
+
+.inputWrapper {
+	position: relative;
+}
+
+.error {
+	outline-color: var(--red);
+}
+
+.errorMessage {
+	position: absolute;
+	bottom: -20px;
+
+	left: 0;
+
+	min-width: 300px;
+
+	color: var(--red);
+
+	font-weight: 100;
+}
