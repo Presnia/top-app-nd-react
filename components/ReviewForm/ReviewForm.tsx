@@ -5,12 +5,12 @@ import { TextArea } from "../TextArea/TextArea";
 import { Button } from "../Button/Button";
 import CloseIcon from './close.svg';
 import { useForm, Controller } from "react-hook-form";
-import {IReviewForm, IReviewSentResponse} from "./ReviewForm.interface";
+import { IReviewForm, IReviewSentResponse } from "./ReviewForm.interface";
+import { API } from "../../helpers/api";
+import { useState } from "react";
 import cn from 'classnames';
 import s from './ReviewForm.module.css';
 import axios from "axios";
-import {API} from "../../helpers/api";
-import {useState} from "react";
 
 export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.Element => {
     const { register, control, handleSubmit, formState: { errors }, reset } = useForm<IReviewForm>();
