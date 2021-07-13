@@ -1,8 +1,18 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
+import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
+import close from './close.svg';
+import menu from './menu.svg';
+import up from './up.svg';
 
-export interface ButtonProps 
-        extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-  children: ReactNode;
-  appearance: 'primary' | 'ghost';
-  arrow?: 'right' | 'down' | 'none';
+export const icons = {
+    close,
+    menu,
+    up
+};
+
+export type IconName = keyof typeof icons;
+
+export interface ButtonIconProps
+    extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+    appearance: 'primary' | 'white';
+    icon: IconName;
 }
