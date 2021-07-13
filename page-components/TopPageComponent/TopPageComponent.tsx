@@ -6,7 +6,6 @@ import {SortEnum} from "../../components/Sort/Sort.props";
 import {useEffect, useReducer} from "react";
 import {sortReducer} from "./sort.reducer";
 
-
 export const TopPageComponent = ({ page, products, firstCategory }: TopPageComponentProps): JSX.Element => {
     const [{products: sortedProducts, sort}, dispatchSort] = useReducer(sortReducer, { products, sort: SortEnum.Rating });
 

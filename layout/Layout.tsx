@@ -2,10 +2,12 @@ import { LayoutProps } from './Layout.props';
 import { Header } from './Header/Header';
 import { SideBar } from "./SideBar/SideBar";
 import { Footer } from "./Footer/Footer";
-import cn from 'classnames';
-import s from './Layout.module.css';
 import { FunctionComponent } from "react";
 import { AppContextProvider, IAppContext } from "../context/app.context";
+import { Up } from "../components";
+import cn from 'classnames';
+import s from './Layout.module.css';
+
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
@@ -16,6 +18,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
           {children}
       </div>
       <Footer className={s.footer} />
+        <Up />
     </div>
   );
 };
