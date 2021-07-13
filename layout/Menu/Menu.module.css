@@ -3,7 +3,7 @@
 
 	align-items: center;
 
-	margin-top: 20px;
+	margin: 20px 0 20px 0;
 
 	font-size: 18px;
 	font-weight: 500;
@@ -36,7 +36,6 @@
 }
 
 .secondLevel {
-	margin-top: 15px;
 	margin-bottom: 10px;
 
 	cursor: pointer;
@@ -51,6 +50,8 @@
 
 .secondLevelBlock {
 	overflow: hidden;
+
+	margin: 0 !important;
 }
 
 .thirdLevel {
