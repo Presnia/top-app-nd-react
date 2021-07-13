@@ -37,10 +37,6 @@
 		gap: 10px;
 	}
 
-	.header {
-		display: block;
-	}
-
 	.sidebar {
 		display: none !important;
 	}
