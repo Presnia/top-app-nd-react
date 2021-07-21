@@ -2,9 +2,10 @@
 	display: grid;
 	grid-template-columns: auto 1fr auto;
 
+	align-items: baseline;
+
 	margin-bottom: 20px;
 
-	align-items: baseline;
 	justify-items: left;
 	gap: 20px;
 }
