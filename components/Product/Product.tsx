@@ -109,7 +109,7 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
                     color='blue'
                     className={s.reviews}
                     ref={reviewRef}
-                    tabIndex={0}
+                    tabIndex={isReviewOpened ? 0 : -1}
                 >
                     {product.reviews && product.reviews.map(r => (
                         <div key={r._id} >
@@ -117,7 +117,7 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
                             <Divider />
                         </div>
                     ))}
-                    <ReviewForm productId={product._id} />
+                    <ReviewForm productId={product._id} isOpened={isReviewOpened}/>
                 </Card>
             </motion.div>
         </div>

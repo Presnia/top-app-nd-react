@@ -5,23 +5,23 @@ import cn from 'classnames';
 import s from './Rating.module.css';
 
 
-export const Rating = forwardRef(({ isEditable = false, rating, error, setRating, children, ...props }: RatingProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
+export const Rating = forwardRef(({ isEditable = false, rating, error, setRating, tabIndex, ...props }: RatingProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
     const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
     const ratingArrayRef = useRef<(HTMLSpanElement | null)[]>([]);
 
     useEffect(() => {
         constructRating(rating);
-    }, [rating]);
+    }, [rating, tabIndex]);
 
     const computeFocus = (r: number, i: number): number => {
         if (!isEditable) {
             return -1;
         }
         if (!rating && i == 0) {
-            return 0;
+            return tabIndex ?? 0;
         }
         if (r == i + 1) {
-            return 0;
+            return tabIndex ?? 0;
         }
         return -1;
     };
