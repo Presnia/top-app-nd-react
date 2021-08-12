@@ -29,6 +29,7 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
             behavior: 'smooth',
             block: 'start'
         });
+        reviewRef.current?.focus();
     };
 
     return (
@@ -108,6 +109,7 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
                     color='blue'
                     className={s.reviews}
                     ref={reviewRef}
+                    tabIndex={0}
                 >
                     {product.reviews && product.reviews.map(r => (
                         <div key={r._id} >
