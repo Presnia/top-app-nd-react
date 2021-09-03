@@ -30,23 +30,31 @@
 
 .secondBlock {
 	margin-left: 12px;
-	padding-left: 32px;
+	padding: 0 0 0 32px;
+
+	list-style-type: none;
 
 	border-left: 1px solid #DFDFDF;
 }
 
 .secondLevel {
 	margin-bottom: 10px;
+	padding: 0;
 
 	cursor: pointer;
 	text-transform: uppercase;
 
 	color: var(--gray-dark);
 
+	border: none;
+
 	outline-offset: 1px;
+
+	background-color: transparent;
 
 	font-size: 12px;
 	font-weight: 300;
+
 	line-height: 16px;
 }
 
@@ -54,6 +62,9 @@
 	overflow: hidden;
 
 	margin: 0 !important;
+	padding: 0 6px;
+
+	list-style: none;
 }
 
 .thirdLevel {
