@@ -2,7 +2,7 @@
 	display: grid;
 	grid-template-columns: auto 1fr auto;
 
-	align-items: baseline;
+	align-items: center;
 
 	margin-bottom: 20px;
 
